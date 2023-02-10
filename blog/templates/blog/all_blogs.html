@@ -1,0 +1,70 @@
+{% extends "portfolio/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+
+<!-- <h1 id="blogtitle" class="font-weight-bold text-center">Blog</h1>
+
+<h3 class="text-center mb-5">Nick has written {{ blogs.count }} blog{{ blogs.count|pluralize }}</h3>
+
+{% for blog in blogs %}
+<div class="row justify-content-center my-3">
+  <div class="col-md-10">
+    <a href="{% url 'blog:detail' blog.id %}">
+      <h2>{{ blog.title }}</h2>
+    </a>
+    <h5 class="text-muted">{{ blog.date|date:'M d Y'|upper }}</h5>
+    <h4>{{ blog.description|striptags|truncatechars:100 }}</h4>
+  </div>
+</div>
+{% endfor %} -->
+<div class="wrapper">
+  <div class="page-header page-header-small">
+    <div class="page-header-image" data-parallax="true" style="background-image: url('/static/assets/img/ttten.svg');">
+    </div>
+    <div class="content-center">
+      <div class="container">
+        <h1 class="title">Menorah Blogs</h1>
+        <div class="text-center">
+          <a href="#pablo" class="btn btn-primary btn-icon btn-round">
+            <i class="fab fa-facebook-square"></i>
+          </a>
+          <a href="#pablo" class="btn btn-primary btn-icon btn-round">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#pablo" class="btn btn-primary btn-icon btn-round">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section section-team text-center">
+    <div class="container">
+      <h2 class="title">Blogs</h2>
+      {% for blog in blogs %}
+      <div class="team">
+        <div class="row">
+          <div class="col-md-8 ml-auto mr-auto text-center">
+            <div class="team-player">
+              <!-- <img src="../assets/img/avatar.jpg" alt="Thumbnail Image" class="rounded-circle img-fluid img-raised"> -->
+              <h4 class="title">{{ blog.title }}</h4>
+              <!-- <p class="category text-primary">Model</p> -->
+              <p class="description">{{ blog.description|striptags|truncatechars:100 }}
+                <a href="{% url 'blog:detail' blog.id %}">Read More</a> </p>
+              <!-- <a href="#pablo" class="btn btn-primary btn-icon btn-round"><i class="fab fa-twitter"></i></a>
+              <a href="#pablo" class="btn btn-primary btn-icon btn-round"><i class="fab fa-instagram"></i></a>
+              <a href="#pablo" class="btn btn-primary btn-icon btn-round"><i class="fab fa-facebook-square"></i></a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}
