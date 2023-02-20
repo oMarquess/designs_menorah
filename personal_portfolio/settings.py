@@ -140,5 +140,5 @@ EMAIL_HOST_USER = 'designsmenorah@gmail.com'
 EMAIL_HOST_PASSWORD = 'pwazjjtzhddawcay'
 ADMINS = (('sala', 'sredeemer24@gmail.com'),('ruth', 'ruthga419@gmail.com'),)
 
-CSRF_TRUSTED_ORIGINS = ['https://web-production-887d.up.railway.app/']
+CSRF_TRUSTED_ORIGINS = ['https://web-production-887d.up.railway.app']
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
